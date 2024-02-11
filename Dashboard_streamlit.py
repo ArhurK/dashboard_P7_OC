@@ -18,11 +18,11 @@ button_clicked = st.button('Obtenir les prédictions, Shap values et données cl
 if button_clicked:
     try:
         # API Prédictions
-        predict_proba_url = requests.get(url='http://127.0.0.1:8000/predict_proba', json={"index": client_id})
+        predict_proba_url = requests.get(url='https://apip7.azurewebsites.net/predict_proba', json={"index": client_id})
         response_predict_proba = predict_proba_url
 
         # Appel API pour obtenir les Shap values
-        shap_url = requests.get(url='http://127.0.0.1:8000/shap', json={"index": client_id})
+        shap_url = requests.get(url='https://apip7.azurewebsites.net/shap', json={"index": client_id})
         response_shap = shap_url
 
         if response_predict_proba.status_code == 200 and response_shap.status_code == 200:
