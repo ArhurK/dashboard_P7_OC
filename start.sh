@@ -7,4 +7,5 @@ apt-get update
 apt-get -y install curl
 apt-get install libgomp1
 
+# lancement de l'application
 streamlit run Dashboard_streamlit.py
