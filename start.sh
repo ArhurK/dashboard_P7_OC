@@ -8,4 +8,4 @@
 # apt-get install libgomp1
 
 # lancement de l'application
-streamlit run Dashboard_streamlit.py
+python -m streamlit run Dashboard_streamlit.py
